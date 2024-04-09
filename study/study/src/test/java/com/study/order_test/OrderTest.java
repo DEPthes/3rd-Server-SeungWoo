@@ -1,4 +1,4 @@
-package com.study;
+package com.study.order_test;
 
 import com.study.domain.Order;
 import com.study.domain.Product;
@@ -21,10 +21,6 @@ public class OrderTest {
     @Mock
     private OrderService orderServiceMock;
 
-//    public OrderTest() {
-//        MockitoAnnotations.initMocks(this);
-//    }
-
     @Test
     @DisplayName("주문 생성 테스트")
     public void 주문생성() {
@@ -35,8 +31,6 @@ public class OrderTest {
         products.add(book);
         products.add(pencil);
 
-//        OrderService orderService = new OrderService();
-
         // 모의 객체를 사용하여 createOrder 메서드가 호출될 때 Order 객체를 반환하도록 설정
         when(orderServiceMock.createOrder(products)).thenReturn(new Order(1L, products));
 
@@ -45,7 +39,7 @@ public class OrderTest {
 
         // Then
         assertNotNull(order);
-        assertNotEquals(1, order.getProducts().size());
+        assertNotEquals(1, order.getProducts().size()); // 개수
         assertEquals(2, order.getProducts().size());
         assertEquals("책", order.getProducts().get(0).getName());
         assertEquals("연필", order.getProducts().get(1).getName());

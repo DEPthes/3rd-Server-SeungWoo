@@ -7,28 +7,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class StringUtilsTest {
 
-    @BeforeAll
-    static void beforeAll() {
-        System.out.println("Before All");
-    }
-
-    @BeforeEach
-    void beforeEach() {
-        System.out.println("----------------------");
-        System.out.println("Before Each");
-    }
-
-    @AfterEach
-    void afterEach() {
-        System.out.println("After Each");
-    }
-
-    @AfterAll
-    static void afterAll() {
-        System.out.println("----------------------");
-        System.out.println("After All");
-    }
-
     @Test
     @DisplayName("문자열 합치기 테스트")
     public void 문자열합치기() {
