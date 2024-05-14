@@ -1,0 +1,10 @@
+
+
+# jwt
+secret-key: fndsjhfbhjsdbn122b831yrh283hfuo23hd8ueiqnvm9390bm549imb50un1f02unf023nfm2iujf10
+expiration-minutes: 30	# Access Token ?? ?? : 30?
+refresh-expiration-hours: 24 # Refresh Token ?? ??? 24??
+issuer: DEPth
+app:
+  cors:
+    allowed-origins: http://localhost:3000, http://localhost:8080
